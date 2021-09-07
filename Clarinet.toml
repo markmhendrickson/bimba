@@ -1,0 +1,26 @@
+[project]
+name = "bimba"
+requirements = []
+[contracts.artwork]
+path = "contracts/artwork.clar"
+depends_on = []
+
+[contracts.coin]
+path = "contracts/coin.clar"
+depends_on = []
+
+[contracts.contest]
+path = "contracts/contest.clar"
+depends_on = ["artwork", "coin", "vrf"]
+
+[contracts.ft-trait]
+path = "contracts/ft-trait.clar"
+depends_on = []
+
+[contracts.nft-trait]
+path = "contracts/nft-trait.clar"
+depends_on = []
+
+[contracts.vrf]
+path = "contracts/vrf.clar"
+depends_on = []
