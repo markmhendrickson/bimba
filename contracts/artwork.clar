@@ -7,6 +7,8 @@
 ;; Improvements
 ;; - enable impl-trait
 ;; - standardize and distinguish error codes
+;; - optimize efficiency
+;; - write tests
 
 ;; Error codes
 (define-constant ERR-UNAUTHORIZED u1)

@@ -9,6 +9,8 @@
 ;; - set total supply
 ;; - standardize and distinguish error codes
 ;; - remove mint-for-creator
+;; - optimize efficiency
+;; - write tests
 
 ;; Error codes
 (define-constant ERR-UNAUTHORIZED u1)

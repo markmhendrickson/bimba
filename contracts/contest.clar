@@ -8,6 +8,8 @@
 ;; - add function for claiming artwork rewards (stx)
 ;; - add function for claiming vote rewards (coins and artwork)
 ;; - increase round size to multiple block duration approximating 1 day
+;; - optimize efficiency
+;; - write tests
 
 ;; Error codes
 (define-constant ERR-UNAUTHORIZED u1)
@@ -52,15 +54,6 @@
     (ok (print { artwork-id: artwork-id, submitter: tx-sender, round: round, stx-amount: stx-amount }))
   )
 )
-
-;;(define-public (claim-vote-rewards (round uint))
-;;  (let
-;;    (
-;;      (round (unwrap! (get-round) (err ERR-FAILED)))
-;;      (vrfSample (unwrap! (contract-call? .vrf get-random-uint-at-block maturityHeight) (err ERR-FAILED)))
-;;    )
-;;  )
-;;)
 
 (define-read-only (get-vote-data (submitter principal) (round uint))
   (let
