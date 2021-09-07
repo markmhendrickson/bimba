@@ -2,6 +2,7 @@
 
 ;; Improvements
 ;; - finish is-vote-winner function
+;; - disallow submit-artwork if no coin-amount provided
 ;; - standardize and distinguish error codes
 ;; - add function for increasing coin-amount for submitted artwork
 ;; - add function for increasing stx-amount for submitted vote
@@ -43,7 +44,6 @@
 (define-public (submit-vote (artwork-id uint) (stx-amount uint))
   (let
     (
-      ;; disallow without u0 < stx-amount
       (round (unwrap! (get-round) (err ERR-FAILED)))
       (round-previous-stx-total (if (is-some (map-get? stx-totals-per-round { round: round })) (unwrap! (map-get? stx-totals-per-round { round: round }) (err ERR-FAILED)) u0))
     )
