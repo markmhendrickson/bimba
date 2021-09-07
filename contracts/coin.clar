@@ -7,7 +7,7 @@
 ;; Improvements
 ;; - enable impl-trait
 ;; - set total supply
-;; - standardize error codes
+;; - standardize and distinguish error codes
 ;; - remove mint-for-creator
 
 ;; Error codes

@@ -1,9 +1,13 @@
 ;; This contract defines the mining contest.
 
 ;; Improvements
-;; - standardize error codes
+;; - finish is-vote-winner function
+;; - standardize and distinguish error codes
 ;; - add function for increasing coin-amount for submitted artwork
 ;; - add function for increasing stx-amount for submitted vote
+;; - add function for claiming artwork rewards (stx)
+;; - add function for claiming vote rewards (coins and artwork)
+;; - increase round size to multiple block duration approximating 1 day
 
 ;; Error codes
 (define-constant ERR-UNAUTHORIZED u1)
@@ -98,6 +102,3 @@
 (define-private (get-round)
   (ok block-height)
 )
-
-;; claim-artwork nft-address
-;; claim-artwork-rewards nft-address
